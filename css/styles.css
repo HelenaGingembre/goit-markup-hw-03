@@ -35,7 +35,7 @@ body {
   background-color: var(--bg-color-main);
 }
 .container {
-  outline: 1px solid tomato;
+  /* outline: 1px solid tomato; */
   width: 1200px; /* 1170+ 15+15*/
   padding: 0 15px;
   margin: 0 auto;
@@ -180,8 +180,8 @@ body {
 }
 /* section Features */
 .section {
-  /* background-color: var(--bg-color-main); */
-  background-color: greenyellow;
+  background-color: var(--bg-color-main);
+  /* background-color: greenyellow; */
   padding: 94px 0;
 }
 .hidden {
