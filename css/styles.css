@@ -365,17 +365,24 @@ footer .logo {
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: var(--bg-color-card);
-  border: 1px solid rgba(238, 238, 238, 1);
-  box-sizing: border-box;
 }
 
 .portfolio-card:nth-child(3n) {
   margin-right: 0;
 }
 
+.card-thumb img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .description {
   padding: 20px 24px;
   text-align: left;
+  border: 1px solid rgba(238, 238, 238, 1);
+  border-top: 0;
+  box-sizing: border-box;
 }
 .portfolio-card .title {
   margin: 0;
