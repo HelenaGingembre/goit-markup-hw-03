@@ -216,6 +216,7 @@ body {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 94px;
 }
 .feature-list .feature-item {
   width: 270px;
