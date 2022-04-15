@@ -26,8 +26,37 @@ html {
 *::after {
   box-sizing: inherit;
 }
-body {
+/* Убираем  маркеры */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Убираем внешние, внутренние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
   margin: 0;
+  padding: 0;
+}
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+body {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.17;
@@ -35,19 +64,11 @@ body {
   background-color: var(--bg-color-main);
 }
 .container {
-  /* outline: 1px solid tomato; */
+  outline: 1px solid tomato;
   width: 1200px; /* 1170+ 15+15*/
   padding: 0 15px;
   margin: 0 auto;
   text-align: center;
-}
-
-.list,
-.nav-list,
-.nav-address {
-  padding: 0;
-  margin: 0;
-  list-style: none;
 }
 
 .link,
@@ -112,6 +133,9 @@ body {
   /* line-height: 1.17; 16.41px/14px =1.17 */
   letter-spacing: 0.02em;
 }
+.nav-list .current {
+  color: var(--accent-color);
+}
 .nav-address {
   margin-left: auto;
 }
@@ -124,36 +148,36 @@ body {
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--text-color-p);
-  /* font-size: 14px; */
-  /* line-height: 1.17;  */
-  /* 16.41px/14px =1.17 */
   letter-spacing: 0.02em;
 }
 /* section Hero */
 .hero {
   background-color: var(--bg-color-hero);
   text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero-title {
-  display: inline-block;
+  /* display: inline-block;
   margin-top: 200px;
   margin-bottom: 30px;
   margin-left: 252px;
-  margin-right: 252px;
+  margin-right: 252px; */
+  margin: 0 auto;
 
   width: 696px;
   color: var(--hero-title-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36; /* 60px/44px =1.36 */
-  text-align: center;
+  /* text-align: center; */
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .hero .btn {
-  margin-bottom: 200px;
+  margin-top: 30px;
   padding: 10px 32px;
   color: var(--btn-text-color);
   background-color: var(--accent-color);
@@ -180,9 +204,10 @@ body {
 }
 /* section Features */
 .section {
-  background-color: var(--bg-color-main);
+  /* background-color: var(--bg-color-main); */
   /* background-color: greenyellow; */
   padding: 94px 0;
+  margin-top: 0;
 }
 .hidden {
   position: absolute;
@@ -208,6 +233,7 @@ body {
   margin-left: 30px;
 }
 .feature-item .title {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14; /* 16px/14px=1.14 */
@@ -224,6 +250,9 @@ body {
   /* color: var(--text-color-p); */
 }
 /* section Projects */
+.projects {
+  padding-top: 0;
+}
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -292,8 +321,6 @@ footer .container {
 }
 footer .logo {
   display: inline-block;
-  /* margin: 60px 0 20px; */
-  /* margin-top: 60px;*/
   margin-bottom: 20px;
   color: var(--text-color-logo-footer);
   font-size: 26px;
@@ -323,11 +350,12 @@ footer .logo {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  margin-bottom: 50px;
   align-items: center;
   justify-content: center;
 }
 .filter-list .filter-item + .filter-item {
-  margin-left: 30px;
+  margin-left: 8px;
 }
 .filter-item .btn {
   font-weight: 500;
@@ -345,7 +373,8 @@ footer .logo {
 }
 .filter-item .btn:hover,
 .filter-item .btn:focus,
-.filter-item .btn:active {
+.filter-item .btn:active,
+.filter-item .current-btn {
   color: var(--btn-text-color);
   background: var(--accent-color);
 
@@ -361,7 +390,7 @@ footer .logo {
   flex-wrap: wrap;
 }
 .portfolio-card {
-  width: 370px;
+  min-width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
   background-color: var(--bg-color-card);
@@ -373,7 +402,7 @@ footer .logo {
 
 .card-thumb img {
   display: block;
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
 }
 
