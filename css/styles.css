@@ -160,7 +160,6 @@ body {
 
 .hero-title {
   margin: 0 auto;
-
   width: 696px;
   color: var(--hero-title-color);
   font-weight: 900;
@@ -216,7 +215,6 @@ body {
 .feature-list {
   display: flex;
   flex-wrap: wrap;
-  /* margin-bottom: 94px; */
 }
 .feature-list .feature-item {
   width: 270px;
@@ -230,18 +228,15 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  /* 16px/14px=1.14 */
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-color-h);
 }
 .feature-item .text {
   font-weight: 400;
-  /* font-size: 14px;*/
   line-height: 1.71;
   /* or 171% = 24px/14px*/
   letter-spacing: 0.03em;
-  /* color: var(--text-color-p); */
 }
 /* section Projects */
 .projects {
@@ -327,12 +322,11 @@ footer .logo {
   margin-top: 9px;
 }
 .address-item {
+  color: var(--p-color-address);
   font-style: normal;
-  /* font-size: 14px; */
   line-height: 1.71;
   /* or 171% =24px/14px */
   letter-spacing: 0.03em;
-  color: var(--p-color-address);
 }
 
 .address-item .link {
@@ -353,17 +347,17 @@ footer .logo {
 }
 .filter-item .btn {
   padding: 8px 22px;
+  color: var(--text-color-h);
+  background-color: var(--bg-section-team);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   /* identical to box height, or 162%=26px/16px */
   text-align: center;
   letter-spacing: 0.03em;
-  color: var(--text-color-h);
-  background-color: var(--bg-section-team);
+
   border: 1px solid transparent; /* прозрачная рамка*/
   border-radius: 4px;
-  /* border: none; */
   cursor: pointer;
 }
 .filter-item .btn:hover,
@@ -413,14 +407,12 @@ footer .logo {
 }
 .portfolio-card .title {
   margin: 0;
+  color: var(--text-color-h);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   /* identical to box height, or 200% =36px/18px*/
-
   letter-spacing: 0.06em;
-
-  color: var(--text-color-h);
 }
 .portfolio-card .text {
   margin-top: 4px;
